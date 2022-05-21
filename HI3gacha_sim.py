@@ -8,7 +8,7 @@ def singlePull(rates, arankRate, srankRate, softten, pity):
         print("\tHit full pity")
         result = ["S-rank Valkyrie"]
     elif softten == 9:
-        # Gaurantee A rank or higher after missing one for 9 pulls
+        # Guarantee A rank or higher after missing one for 9 pulls
         # Assumes A and S rank rates are same as before but weighted out of arankRate + srankRate instead of out of 100
         print("\tHit the ten-pull gaurantee")
         result = random.choices(["S-rank Valkyrie", "A-rank Valkyrie"], cum_weights=[srankRate, arankRate], k=1)

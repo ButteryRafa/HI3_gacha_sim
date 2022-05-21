@@ -4,10 +4,10 @@ import sys
 
 def singlePull(rates, arankRate, srankRate, softten, pity):
     # Pull
-    if   pity == 100:
+    if   pity == 99:
         print("\tHit full pity")
         result = [b"S-rank Valkyrie"]
-    elif softten == 10:
+    elif softten == 9:
         # Gaurantee A rank or higher after missing one for 9 pulls
         # Assumes A and S rank rates are same as before but weighted out of arankRate + srankRate instead of out of 100
         print("\tHit the ten-pull gaurantee")

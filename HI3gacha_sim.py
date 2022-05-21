@@ -54,8 +54,8 @@ result = [0]*pullcnt
 print(result)
 
 # Rates and Pool for Dorm Supply
-rates = np.genfromtxt("DormRates.csv", delimiter=',', dtype=None, names=True)
-valkPool = np.genfromtxt("DormCharacterPool.csv", delimiter=',', dtype=None, names=True)
+rates = np.genfromtxt("DormRates.csv", delimiter=',', dtype=None, names=True, encoding='bytes')
+valkPool = np.genfromtxt("DormCharacterPool.csv", delimiter=',', dtype=None, names=True, encoding='bytes')
 
 for r in rates:
     print(r["Name"], r["Rate"])

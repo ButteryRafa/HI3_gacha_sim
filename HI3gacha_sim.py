@@ -11,10 +11,10 @@ def singlePull(rates, arankRate, srankRate, softten, pity):
         # Guarantee A rank or higher after missing one for 9 pulls
         # Assumes A and S rank rates are same as before but weighted out of arankRate + srankRate instead of out of 100
         print("\tHit the ten-pull gaurantee")
-        result = random.choices(["S-rank Valkyrie", "A-rank Valkyrie"], cum_weights=[srankRate, arankRate], k=1)
+        result = random.choices(["S-rank Valkyrie", "A-rank Valkyrie"], weights=[srankRate, arankRate], k=1)
     else:
         # Regular pull
-        result = random.choices(rates["Name"], cum_weights=rates["Rate"], k=1)
+        result = random.choices(rates["Name"], weights=rates["Rate"], k=1)
 
     softten = softten + 1
     pity = pity + 1
